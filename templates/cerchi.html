@@ -1,0 +1,54 @@
+<style>
+  .cerchi-container {
+    display: flex;
+    gap: 5px;
+  }
+
+  .cerchio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  @keyframes bounceUp {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Quando il container è in hover, animiamo i cerchi con delay sfalsato */
+  .cerchi-container:hover .cerchio {
+    animation: bounceUp 0.4s ease-in-out;
+  }
+
+  .cerchi-container:hover .cerchio:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  .cerchi-container:hover .cerchio:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .cerchi-container:hover .cerchio:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .cerchi-container:hover .cerchio:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+</style>
+<div class="cerchi-container">
+  <span class="cerchio" style="background-color: #87B5C4;"></span>
+  <span class="cerchio" style="background-color: #C44325;"></span>
+  <span class="cerchio" style="background-color: #F8B451;"></span>
+  <span class="cerchio" style="background-color: #000000;"></span>
+</div>

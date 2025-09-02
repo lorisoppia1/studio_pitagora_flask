@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "ItsRonda";
+    src: url("{% static 'fonts/its_ronda_font.otf' %}") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "ItsRonda", sans-serif;
+}

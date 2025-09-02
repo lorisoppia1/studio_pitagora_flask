@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi siamo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div style="height: 140px; background-color: #C18774;">
+    {% include "navbar.html" %}
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col p-5 bg-light">
+
+        <img src="{{url_for('static', filename='images/foto_studio.jpg') }}"
+          class="img-fluid w-100 h-100 object-fit-cover">
+      </div>
+      <div class="col p-5 bg-light">
+        <h3 class="fw-bold">Studio di Logopedia e polispecialitico</h3>
+        <h5>Cosa è Studio Pitagora</h5>
+        {% include "cerchi.html" %}
+        <p>
+          Nel cuore pulsante di Borgo Nuovo, a Verona, Studio Pitagora nasce come un punto di riferimento innovativo e
+          facilmente raggiungibile per chi cerca servizi polispecialistici di qualità, comodamente a portata di mano. La
+          nostra posizione strategica, vicina alle principali vie di comunicazione e ai mezzi pubblici, rende ogni
+          visita semplice e senza stress, ideale per famiglie e professionisti con ritmi serrati.
+          <br><br>
+          Grazie alla sinergia con realtà professionali di eccellenza presenti nelle immediate vicinanze - come il
+          Centro Dentale, il Centro FKT, lo Studio di Oculistica, Ortottica e Psicomotricità - e alla competenza dei
+          professionisti che operano all'interno dello studio, Studio Pitagora è in grado di offrire una copertura
+          completa e coordinata di tutte le esigenze di salute e benessere dei pazienti.
+          <br><br>
+          Una rete di servizi specialistici uniti per assicurare un'assistenza globale e continua, senza spersioni
+          o lunghe attese.
+          <br><br>
+          Offriamo percorsi terapeutici personalizzati per bambini, adulti e famiglie, in un ambiente accogliente che
+          mette al centro l'ascolto e la cura della persona. La nostra missione è accompagnare chi affronta difficoltà
+          di natura fisica, psicologica o sociale, grazie a un team di professionisti qualificati con
+          competenze diversificate.
+          <br><br>
+          Con trattamenti su misura e una visione integrata, Studio Pitagora sostiene ogni fase della vita, promuovendo
+          salute, equilibrio e benessere duraturo, con la comodità di un punto di riferimento completo e facilmente
+          accessibile nel quartiere Borgo Nuovo.
+        </p>
+        <div class="button-right">
+          <a href="/contatti" class="btn text-white rounded-pill px-4"
+            style="background-color:#C18774; text-decoration:none;">
+            PRENOTA UNA PRIMA CONSULENZA
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col p-5 bg-light">
+
+        <h4 class="mb-3">Capitolo 1: La nascita di un'idea</h4>
+        <p>L'estate del 2023 ha segnato l'inizio di un sogno che prendeva forma nella mia mente: creare uno spazio dove
+          professionalità, ascolto e cura potessero convivere in modo integrato e a misura di persona. Da quell'idea, è
+          partita tutta la progettazione e l'organizzazione necessaria per dare vita a uno studio polispecialistico nel
+          cuore di Borgo Nuovo, Verona.
+          <br><br>
+          Dopo mesi di lavoro, impegno e attenzione ai dettagli, lo studio è finalmente nato il 1 dicembre 2023, una
+          data che ha un significato speciale: il compleanno del mio primogenito. Un simbolo di nuova vita e nuove
+          possibilità, proprio come lo è Studio Pitagora.
+        </p>
+
+        {% include "cerchi.html" %}
+        <h4 class="mb-3">Capitolo 2: Le prime collaborazioni</h4>
+        <p>A sorpresa, dopo l'apertura, sono arrivate le prime conferme importanti. La dott.ssa Calzolari, psicologa con
+          cui avevo già collaborato in passato, ha deciso di aderire con entusiasmo al progetto. Poco dopo, anche la
+          dott.ssa Venturi ha sposato questa causa, portando la sua professionalità e la sua esperienza.
+          <br><br>
+          Entrambe hanno scelto di realizzare il loro studio personale all'interno di Studio Pitagora, dando vita a un
+          ambiente ricco di competenze e con un forte spirito di collaborazione. Una crescita che ha superato le
+          aspettative e ha confermato la validità dell'idea originaria.
+        </p>
+
+        {% include "cerchi.html" %}
+        <h4 class="mb-3">Capitolo 3: Lo spazio per la riabilitazione fisica</h4>
+        <p>Un passo fondamentale è stato quello di dedicare uno spazio specifico alla riabilitazione fisica, dotandolo
+          di attrezzature adeguate per rispondere alle diverse esigenze dei pazienti.
+          <br><br>
+          A soli sei mesi dall'apertura, questa area ha attirato l'attenzione di altri professionisti: il dott. Salzano,
+          osteopata e chinesiologo, e Nicole Stara, massoterapista, hanno chiesto di entrare a far parte del progetto,
+          ampliando l'offerta e rendendo lo studio un centro sempre più completo e specializzato.
+        </p>
+
+        {% include "cerchi.html" %}
+        <h4 class="mb-3">Capitolo 4: Collaborazioni esterne e sviluppo futuro</h4>
+        <p>Con il consolidarsi dello studio, è emersa la necessità di intensificare le collaborazioni esterne con
+          specialisti di riferimento: neuropsichiatri infantili (NPI), foniatri, odontoiatri, gnatologi, fisioterapisti
+          (FKT), psicomotricisti
+          e otorinolaringoiatri (ORL).
+          <br><br>
+          Un importante arrivo è stato quello della dott.ssa Nuzzo, che si è proposta come terapista della neuro e
+          psicomotricità dell'età evolutiva (TNPEE), contribuendo a integrare il servizio di logopedia con nuovi innesti
+          professionali.
+          <br><br>
+          Guardando avanti, i progetti futuri di Studio Pitagora puntano a offrire formazione specialistica, servizi
+          online per garantire accessibilità e continuità anche a distanza, e un potenziamento della riabilitazione a
+          domicilio, per essere sempre più vicini alle esigenze di ogni paziente.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col p-5 bg-light">
+        <h3 class="fw-bold">Dott. Alessandro Rigamonti</h3>
+        <h5>Logopedista e titolare di Studio Pitagora</h5>
+        {% include "cerchi.html" %}
+        <p>
+          Mi presento: sono laureato in Logopedia dal 2011. Dopo più di 10 anni di esperienza lavorativa sia in
+          libera professione che presso il Sistema Sanitario Nazionale ho deciso di creare questo spazio di lavoro che
+          prende il nome di Studio Pitagora nel dicembre 2023.
+          <br>
+          Fin da subito si sono aggiunte al mio percorso altre
+          figure professionali che hanno trasformato il mio ambulatorio di logopedia in una realtà multidisciplinare
+          interconnessa. Attualmente lo studio ha raggiunto una configurazione più matura con l'aggiunta di servizi
+          integrativi per la tutela del benessere e della salute dei nostri pazienti.
+        </p>
+      </div>
+      <div class="col-4 p-5 bg-light d-flex justify-content-center align-items-center">
+        <img src="{{url_for('static', filename='images/foto_ale.png') }}" class="rounded-circle"
+          style="width: 300px; height: 300px; object-fit: cover;">
+      </div>
+    </div>
+  </div>
+
+  {% include "footer.html" %}
+</body>
+
+</html>

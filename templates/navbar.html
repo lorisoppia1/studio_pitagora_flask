@@ -1,0 +1,137 @@
+<style>
+  .navbar {
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70px;
+    margin: 40px auto 0;
+    width: 70%;
+    background-color: white;
+    color: #000;
+    padding: 0 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 10;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+  }
+
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+
+  .logo {
+    justify-self: start;
+  }
+
+  .logo img {
+    height: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+  }
+
+  .links {
+    display: flex;
+    gap: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .links a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .links a:hover {
+    color: #4ba2a6;
+  }
+
+  .links a.active {
+    color: #4ba2a6;
+  }
+
+  .button-right button {
+    background-color: #4ba2a6;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button-right button:hover {
+    background-color: #3b8d91;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    min-width: 150px;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 5px;
+    color: black;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #555;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
+<div class="navbar text-uppercase">
+  <div class="logo">
+    <a href="/"><img src="{{ url_for('static', filename='images/logosenzasfondo.png') }}" alt="Studio Pitagora"></a>
+  </div>
+  <div class="links">
+    <a href="/" class="active">Home</a>
+    <a href="/chi_siamo">Chi siamo</a>
+    <div class="dropdown">
+      <a href="#">Servizi <i class="bi bi-chevron-down"></i></a>
+      <div class="dropdown-content">
+        <a href="/logopedia">Logopedia</a>
+        <a href="/psicoterapia">Psicoterapia</a>
+        <a href="/psicologia">Psicologia dell'età evolutiva / Tutor DSA</a>
+        <a href="/tnpee">TNPEE</a>
+        <a href="/osteopatia">Osteopatia D.O. e Chinesiologia</a>
+      </div>
+    </div>
+    <a href="/contatti">Contatti</a>
+  </div>
+  <div class="button-right">
+    <button onclick="window.location.href='mailto:alessandro@logopedistarigamonti.com'">PRENOTA <i
+        class="bi bi-arrow-right-circle-fill"></i></button>
+  </div>
+</div>

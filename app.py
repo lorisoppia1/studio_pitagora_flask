@@ -1,18 +1,19 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, abort
 import os
 
 app = Flask(__name__)
 
-# GET semplice
-@app.route('/', methods=['GET'])
-def hello():
-    return jsonify({"ciao": "swag"})
+@app.route('/')
+def home():
+    return render_template('home.html')
 
-# POST semplice
-@app.route('/echo', methods=['POST'])
-def echo():
-    data = request.json  # riceve JSON
-    return jsonify({"received": data})
+@app.route('/<string:name>')
+def page(name):
+    path = os.path.join(app.template_folder, f"{name}.html")
+    if os.path.exists(path):
+        return render_template(f"{name}.html")
+    else:
+        abort(404)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))

@@ -161,13 +161,6 @@
       display: block;
     }
 
-    .triangolo {
-      width: 100px;
-      height: 100px;
-      background-color: #87B5C4;
-      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    }
-
     .square-img {
       width: 100%;
       aspect-ratio: 1 / 1;
@@ -176,8 +169,8 @@
     }
 
     .service-img {
-      width: 300px;
-      height: 300px;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
       border-radius: 12px;
       transition: transform 0.2s;
@@ -197,8 +190,8 @@
     </video>
     {% include "navbar.html" %}
     <section id="home-title">
-      <h1 class="title">Studio Pitagora</h1>
-      <h1 class="title" style="font-size: 40px;">Servizi rieducativi e riabilitativi</h1>
+      <h1 class="title">STUDIO PITAGORA</h1>
+      <h1 class="title" style="font-size: 40px;">SERVIZI RIEDUCATIVI E RIABILITATIVI</h1>
     </section>
   </section>
 
@@ -219,7 +212,7 @@
             <br><br>
             Il nostro team multidisciplinare, composto da logopedisti, osteopati, psicologi, TNPEE e altri
             professionisti, lavora in sinergia per costruire interventi personalizzati che rispondano alle specifiche
-            esigenze di ciascun paziente, promuovendo un miglioramento concreto e duratura dello stato di salute.
+            esigenze di ciascun paziente, promuovendo un miglioramento concreto e duraturo dello stato di salute.
           </p>
         </div>
       </div>
@@ -259,14 +252,14 @@
 
           <div onclick="window.location.href='/logopedia'" style="cursor:pointer;">
             <img src="{{url_for('static', filename='images/logo_logopedia.png') }}" alt="img1" class="service-img">
-            <h4 class="mt-2 mb-4 d-flex justify-content-between align-items-center">Logopedia
+            <h4 class="mt-2 mb-4 d-flex justify-content-between align-items-center" style="width: 250px;">Logopedia
               <i class="bi bi-arrow-right"></i>
             </h4>
           </div>
 
           <div onclick="window.location.href='/osteopatia'" style="cursor:pointer;">
             <img src="{{url_for('static', filename='images/logo_servizi_1.png') }}" alt="img1" class="service-img">
-            <h4 class="mt-2 d-flex justify-content-between align-items-center">Osteopatia
+            <h4 class="mt-2 d-flex justify-content-between align-items-center" style="width: 250px;">Osteopatia
               <i class="bi bi-arrow-right"></i>
             </h4>
           </div>
@@ -276,14 +269,14 @@
           <div onclick="window.location.href='/psicologia'" style="cursor:pointer;">
 
             <img src="{{url_for('static', filename='images/logo_servizi_2.png') }}" alt="img1" class="service-img">
-            <h4 class="mt-2 mb-4 d-flex justify-content-between align-items-center">Psicologia
+            <h4 class="mt-2 mb-4 d-flex justify-content-between align-items-center" style="width: 250px;">Psicologia
               <i class="bi bi-arrow-right"></i>
             </h4>
           </div>
           <div onclick="window.location.href='/psicoterapia'" style="cursor:pointer;">
 
             <img src="{{url_for('static', filename='images/logo_servizi_3.png') }}" alt="img1" class="service-img">
-            <h4 class="mt-2 d-flex justify-content-between align-items-center">Psicoterapia
+            <h4 class="mt-2 d-flex justify-content-between align-items-center" style="width: 250px;">Psicoterapia
               <i class="bi bi-arrow-right"></i>
             </h4>
           </div>
@@ -293,14 +286,14 @@
           <div onclick="window.location.href='/tnpee'" style="cursor:pointer;">
 
             <img src="{{url_for('static', filename='images/logo_servizi_4.png') }}" alt="img1" class="service-img">
-            <h4 class="mt-2 mb-4 d-flex justify-content-between align-items-center">TNPEE
+            <h4 class="mt-2 mb-4 d-flex justify-content-between align-items-center" style="width: 250px;">TNPEE
               <i class="bi bi-arrow-right"></i>
             </h4>
           </div>
-          <div onclick="window.location.href='/logopedia'" style="cursor:pointer;">
+          <div onclick="window.location.href='/fisioterapia'" style="cursor:pointer;">
 
             <img src="{{url_for('static', filename='images/unnamed.png') }}" alt="img1" class="service-img">
-            <h4 class="mt-2 d-flex justify-content-between align-items-center">Massoterapia
+            <h4 class="mt-2 d-flex justify-content-between align-items-center" style="width: 250px;">Fisioterapia
               <i class="bi bi-arrow-right"></i>
             </h4>
           </div>
@@ -341,7 +334,7 @@
     </div>
   </section>
 
-  <section id="yellow-section" style="background-color: greenyellow;">
+  <!-- <section id="yellow-section" style="background-color: greenyellow;">
     <div class="yellow-columns">
       <div class="yellow-right">
         <div class="yellow-image">
@@ -359,7 +352,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   {% include "footer.html" %}
 
 </body>

@@ -19,18 +19,19 @@
 
 <body>
 
-  <div style="height: 140px; background-color: #C18774;">
+  <div class="container my-3" style="height: 140px;border-radius: 20px;">
     {% include "navbar.html" %}
   </div>
 
-  <div class="container">
+  <div class="container mt-3">
     <div class="row">
-      <div class="col p-5 bg-light">
-
+      <div class="col p-5"
+        style="background-color: #C18774; border-top-left-radius:20px; border-bottom-left-radius:20px;">
         <img src="{{url_for('static', filename='images/foto_studio.jpg') }}"
-          class="img-fluid w-100 h-100 object-fit-cover">
+          class="img-fluid w-100 h-100 object-fit-cover" style="border-radius: 20px;">
       </div>
-      <div class="col p-5 bg-light">
+      <div class="col p-5"
+        style="background-color: #C18774; border-top-right-radius:20px; border-bottom-right-radius:20px;">
         <h3 class="fw-bold">Studio di Logopedia e polispecialitico</h3>
         <h5>Cosa è Studio Pitagora</h5>
         {% include "cerchi.html" %}
@@ -59,7 +60,7 @@
         </p>
         <div class="button-right">
           <a href="/contatti" class="btn text-white rounded-pill px-4"
-            style="background-color:#C18774; text-decoration:none;">
+            style="background-color:#4ba2a6; text-decoration:none;">
             PRENOTA UNA PRIMA CONSULENZA
           </a>
         </div>
@@ -68,11 +69,14 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container my-3">
     <div class="row">
-      <div class="col p-5 bg-light">
+      <div class="bg-light mt-5" style="display:flex; justify-content:center; align-items:center;">
+        <h1>La nostra storia</h1>
+      </div>
+      <div class="col p-5 bg-light" style="background-color: #C18774;">
 
-        <h4 class="mb-3">Capitolo 1: La nascita di un'idea</h4>
+        <h4 class="mb-3">La nascita di un'idea</h4>
         <p>L'estate del 2023 ha segnato l'inizio di un sogno che prendeva forma nella mia mente: creare uno spazio dove
           professionalità, ascolto e cura potessero convivere in modo integrato e a misura di persona. Da quell'idea, è
           partita tutta la progettazione e l'organizzazione necessaria per dare vita a uno studio polispecialistico nel
@@ -84,7 +88,7 @@
         </p>
 
         {% include "cerchi.html" %}
-        <h4 class="mb-3">Capitolo 2: Le prime collaborazioni</h4>
+        <h4 class="mb-3">Le prime collaborazioni</h4>
         <p>A sorpresa, dopo l'apertura, sono arrivate le prime conferme importanti. La dott.ssa Calzolari, psicologa con
           cui avevo già collaborato in passato, ha deciso di aderire con entusiasmo al progetto. Poco dopo, anche la
           dott.ssa Venturini ha sposato questa causa, portando la sua professionalità e la sua esperienza.
@@ -95,7 +99,7 @@
         </p>
 
         {% include "cerchi.html" %}
-        <h4 class="mb-3">Capitolo 3: Lo spazio per la riabilitazione fisica</h4>
+        <h4 class="mb-3">Lo spazio per la riabilitazione fisica</h4>
         <p>Un passo fondamentale è stato quello di dedicare uno spazio specifico alla riabilitazione fisica, dotandolo
           di attrezzature adeguate per rispondere alle diverse esigenze dei pazienti.
           <br><br>
@@ -105,7 +109,7 @@
         </p>
 
         {% include "cerchi.html" %}
-        <h4 class="mb-3">Capitolo 4: Collaborazioni esterne e sviluppo futuro</h4>
+        <h4 class="mb-3">Collaborazioni esterne e sviluppo futuro</h4>
         <p>Con il consolidarsi dello studio, è emersa la necessità di intensificare le collaborazioni esterne con
           specialisti di riferimento: neuropsichiatri infantili (NPI), foniatri, odontoiatri, gnatologi, fisioterapisti
           (FKT), psicomotricisti
@@ -124,25 +128,59 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container my-3">
     <div class="row">
 
       <div class="col p-5 bg-light">
         <h3 class="fw-bold">Dott. Alessandro Rigamonti</h3>
-        <h5>Logopedista e titolare di Studio Pitagora</h5>
         {% include "cerchi.html" %}
         <p>
-          Mi presento: sono laureato in Logopedia dal 2011. Dopo più di 10 anni di esperienza lavorativa sia in
-          libera professione che presso il Sistema Sanitario Nazionale ho deciso di creare questo spazio di lavoro che
-          prende il nome di Studio Pitagora nel dicembre 2023.
-          <br>
-          Fin da subito si sono aggiunte al mio percorso altre
-          figure professionali che hanno trasformato il mio ambulatorio di logopedia in una realtà multidisciplinare
-          interconnessa. Attualmente lo studio ha raggiunto una configurazione più matura con l'aggiunta di servizi
-          integrativi per la tutela del benessere e della salute dei nostri pazienti.
+          Mi presento, sono il <span style="font-weight: bold;">fondatore e responsabile di Studio
+            Pitagora.</span><br>
+          Ho conseguito la laurea in Logopedia nel 2011 presso l’Università degli Studi di Verona, Facoltà di Medicina e
+          Chirurgia.<br><br>
+
+          La mia carriera professionale inizia prestando servizio ambulatoriale in studi e poliambulatori tra le
+          province di Verona, Brescia e Bergamo. Nel 2014 ho intrapreso un percorso di specializzazione in <span
+            style="font-weight: bold;">deglutologia
+            e disfagia</span> e, negli anni successivi, ho avuto l’opportunità di sviluppare e condurre personalmente un
+          progetto
+          innovativo dedicato alla presa in carico logopedica dei <span style="font-weight: bold;">neonati
+            pre-termine con disfagia perinatale</span> presso
+          l’Azienda Ospedaliera Universitaria Integrata di Verona, all’interno della UOC di Pediatria ad Indirizzo
+          Critico (reparti di TIN e TIP).<br><br>
+
+          Parallelamente alla mia attività clinica privata, ho ricoperto il ruolo di <span
+            style="font-weight: bold;">co-direttore di un Centro di
+            Servizi per le famiglie a Verona</span> e, nel 2022, ho preso parte a un progetto multidisciplinare europeo
+          presso
+          Azienda Zero della Regione del Veneto, collaborando alla stesura di un modello di <span
+            style="font-weight: bold;">riabilitazione telematica a
+            distanza per pazienti affetti da Morbo di Alzheimer</span>, in coordinamento con il Servizio di Neurologia
+          dell’ULSS
+          8 Berica.<br><br>
+
+          Dal 2017 presto inoltre servizio come logopedista presso una <span style="font-weight: bold;">fondazione
+            assistenziale per anziani</span>, occupandomi
+          della valutazione e della riabilitazione dei disturbi comunicativi e della deglutizione in RSA.<br><br>
+
+          Dopo oltre dieci anni di esperienza, maturata sia in libera professione sia all’interno del Sistema Sanitario
+          Nazionale, nel dicembre 2023 ho deciso di dare vita a <span style="font-weight: bold;">Studio Pitagora</span>,
+          uno spazio pensato per offrire ai
+          pazienti e alle loro famiglie un <span style="font-weight: bold;">percorso di presa in carico completo
+            e multidisciplinare</span>.<br><br>
+
+          Fin dall’inizio ho scelto di collaborare con professionisti di diverse aree, trasformando il mio ambulatorio
+          di logopedia in una <span style="font-weight: bold;">realtà integrata</span> dove le competenze si incontrano
+          per rispondere in modo globale ai
+          bisogni di salute.<br>
+          Oggi Studio Pitagora è una struttura matura, con <span style="font-weight: bold;">servizi complementari
+            dedicati al benessere e alla salute dei
+            nostri pazienti</span>, in un’ottica di collaborazione continua e personalizzazione del percorso
+          terapeutico.
         </p>
       </div>
-      <div class="col-4 p-5 bg-light d-flex justify-content-center align-items-center">
+      <div class="col-4 p-5 bg-light">
         <img src="{{url_for('static', filename='images/foto_ale.png') }}" class="rounded-circle"
           style="width: 300px; height: 300px; object-fit: cover;">
       </div>

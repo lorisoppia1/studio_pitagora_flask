@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: absolute;
+    position: fixed;
     z-index: 10;
   }
 
@@ -113,7 +113,8 @@
 
 <div class="navbar text-uppercase">
   <div class="logo">
-    <a href="/"><img src="{{ url_for('static', filename='images/logosenzasfondo.png') }}" alt="Studio Pitagora"></a>
+    <a href="/chi_siamo"><img src="{{ url_for('static', filename='images/logosenzasfondo.png') }}"
+        alt="Studio Pitagora"></a>
   </div>
   <div class="links">
     <a href="/">Home</a>
@@ -126,6 +127,7 @@
         <a href="/psicologia">Psicologia dell'età evolutiva / Tutor DSA</a>
         <a href="/tnpee">TNPEE</a>
         <a href="/osteopatia">Osteopatia D.O. e Chinesiologia</a>
+        <a href="/fisioterapia">Fisioterapia</a>
       </div>
     </div>
     <a href="/contatti">Contatti</a>

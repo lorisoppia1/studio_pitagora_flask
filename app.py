@@ -75,3 +75,10 @@ if __name__ == '__main__':
 
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
+
+# sistemare bottone chiama
+# sistemare da telefono i nostri servizi, e la navbar
+# nel perchè sceglierci adattare grandezza foto alla lunghezza del testo
+# ultima slide sistema icona e grandezza dei div, sistema grandezze immagini
+# metti quadrato azzurro/bianco in base al colore del div, cioè icona con sfondo blu sul div bianco e viceversa
+# metti pagina in manutenzione su tutte le pagine tranne logopedia

@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col p-5"
         style="background-color: #C18774; border-top-left-radius:20px; border-bottom-left-radius:20px;">
-        <img src="{{url_for('static', filename='images/foto_studio.jpg') }}"
+        <img src="{{url_for('static', filename='images/foto_studio_nuovo.jpg') }}"
           class="img-fluid w-100 h-100 object-fit-cover" style="border-radius: 20px;">
       </div>
       <div class="col p-5"
@@ -131,7 +131,7 @@
   <div class="container my-3">
     <div class="row">
 
-      <div class="col p-5 bg-light">
+      <div class="col-7 p-5 bg-light">
         <h3 class="fw-bold">Dott. Alessandro Rigamonti</h3>
         {% include "cerchi.html" %}
         <p>
@@ -180,9 +180,19 @@
           terapeutico.
         </p>
       </div>
-      <div class="col-4 p-5 bg-light">
+      <div class="col-5 p-5 bg-light">
         <img src="{{url_for('static', filename='images/foto_ale.png') }}" class="rounded-circle"
           style="width: 300px; height: 300px; object-fit: cover;">
+        <div class="d-flex align-items-center my-3">
+          <i class="bi bi-telephone-fill me-2" style="color: #5F7784;"></i>
+          <span>Dott. Alessandro Rigamonti: +39 349 286 5895</span>
+          <a href="tel:+393492865895" style="text-decoration:none;">
+            <div
+              style="padding:10px; background:#007bff; color:white; border-radius:8px; text-align:center; cursor:pointer;">
+              Chiama ora
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>

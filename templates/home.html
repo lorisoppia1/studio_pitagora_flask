@@ -209,8 +209,133 @@
     </section>
   </section>
 
+  <div class="mio" style="background-color: #C18774;">
+    <div class="row gx-3 gy-3 h-100">
+      <div class="col-12 col-md-6">
+        <div class="h-100 p-3 rounded">
+          <h1 style="font-weight: bold;">Benvenuti</h1>
+          <h3 style="font-weight: bold;">Studio Pitagora: Armonia, Coraggio e Cura</h3>
+          {% include "cerchi.html" %}
+          <p>
+            Il nostro studio prende ispirazione da Pitagora, filosofo e matematico che vedeva nell'armonia e
+            nell'equilibrio le chiavi per comprendere il mondo e l'essere umano.
+            Seguendo questa filosfia millenaria, poniamo la cura delle persone al centro di ogni percorso, con il
+            coraggio e la determinazione necessari per affontar le sfide quotidiane.<br><br>
+            Studio Pitagora non è un semplice spazio di lavoro condiviso ma un luogo dove conoscenze e competenze si
+            intrecciano come note di una sinfonia, dando vita a un approccio integrato e innovativo.
+            Qui la collaboraizone tra professionisti diventa il motore per offrire servizi personalizzati pensati per
+            raggiungere un equilibrio autentico tra mente, corpo e benessere. <br><br>
+            Attrverso lo scambio continuo e la co-creazione, costruiamo percorsi su misura, in cui l'armonia tra le
+            diverse discipline si traduce in una cura completa e profonda della persona.
+          </p>
+          <div class="my-2" style="background-color: white; border-radius: 10px; height: 150px; margin-left: 50px;">
+            <div class="container p-3">
+              <div class="row">
+                <div class="col-3"><img src="{{url_for('static', filename='images/spirale.jpg') }}"
+                    class="img-fluid w-70 h-70 object-fit-cover" style="border-radius: 20px;"></div>
+                <div class="col-9">
+                  <h4 style="font-weight: bold;">Armonia integrata</h4>
+                  <p>Prendersi cura delle persone significa creare equilibrio tra mente, corpo e spirito, riconoscendo
+                    che ogni aspetto è parte di un tutto unico e interconnesso</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-2" style="background-color: #87B5C4; border-radius: 10px; height: 150px; margin-right: 50px;">
+            <div class="container p-3">
+              <div class="row">
+                <div class="col-3 "><img src="{{url_for('static', filename='images/mani.jpg') }}"
+                    class="img-fluid w-70 h-70 object-fit-cover" style="border-radius: 20px;"></div>
+                <div class="col-9">
+                  <h4 style="font-weight: bold;">Collaborazione concreta</h4>
+                  <p>La sinergia tra professionisti nasce da una comunicazione efficace e un lavoro coordinato, per
+                    offrire soluzioni complete e realmente efficaci.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-2" style="background-color: white; border-radius: 10px; height: 150px; margin-left: 50px;">
+            <div class="container p-3">
+              <div class="row">
+                <div class="col-3"><img src="{{url_for('static', filename='images/atomo.jpg') }}"
+                    class="img-fluid w-60 h-60 object-fit-cover" style="border-radius: 20px; height: 70%;"></div>
+                <div class="col-9">
+                  <h4 style="font-weight: bold;">Approccio basato sull'evidenza</h4>
+                  <p>Ogni intervento si fonda su conoscenze aggiornate e dati concreti, per garantire trattamenti
+                    affidabili, responsabili e personalizzati.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="h-100 p-3 rounded"> <img src="{{ url_for('static', filename='images/foto_palazzo.JPG') }}"
+            class="img-fluid w-100 h-100 object-fit-cover" style="border-radius: 20px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="mio" style="background-color: #C3D1CA;">
     <div class="row gx-3 gy-3 h-100">
+      <div class="col-12 col-md-3">
+        <div class="h-100 p-3 rounded"> <img src="{{ url_for('static', filename='images/foto_palazzo.JPG') }}"
+            class="img-fluid object-fit-cover" style="border-radius: 20px;">
+        </div>
+      </div>
+      <div class="col-12 col-md-9">
+        <div class="h-100 p-3 rounded">
+          <h4 style="color: #3b8d91;">Perchè sceglierci</h4>
+          <h2 style="font-weight: bold;">Studio Pitagora - Servizi Integrati per il benessere e lo sviluppo della
+            persona</h2>
+          {% include "cerchi.html" %}
+          <p>
+            <span style="font-weight: bold;">Studio Pitagora</span> è un centro dedicato alla presa in carico di bisogni
+            complessi in ambito evolutivo, educativo, clinico e relazionale. Accogliamo bambini, adolescenti, adulti e
+            nuclei familiari, offrendo interventi mirati attraverso un approccio multidisciplinare fondato
+            sull'ascolto, sulla competenza e sulla costruzione di un'alleanza terapeutica. <br>Il nostro team di
+            professionisti elabora percorsi personalizzati, con l'obiettivo di promuovere il benessere globale della
+            persona e sostenere i contesti educativi e sociali in cui è inserita.
+          </p>
+          <br>
+          <div class="button-right">
+            <a href="/chi_siamo" class="btn text-white rounded-pill px-4"
+              style="background-color:#4ba2a6; text-decoration:none;">
+              Chi siamo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mio" style="background-color: #C3D1CA;">
+    <div class="row gx-3 gy-3 h-100">
+      <div class="col-12 col-md-6">
+        <div class="h-100 p-3 rounded">
+          <h2 style="font-weight: bold;">Il nostro approccio</h2>
+          {% include "cerchi.html" %}
+          <p>A Studio Pitagora mettiamo al centro la persona, creando un percorso di supporto clinico che nasce
+            dall'ascolto attento e dalla fiducia reciproca.
+            Crediamo che ogni difficoltà, sia essa di natura logopedica, posturale, fisica o emotiva, vada affrontata
+            con un approccio integrato e su misura.
+            <br><br>
+            Accogliamo bambini, adolescenti, adulti e famiglie offrendo consulenze e trattamenti pensati per
+            accompagnare ogni fase della vita, favorendo sviluppo, equilibrio e benessere.
+            <br><br>
+            Il nostro team multidisciplinare, composto da logopedisti, osteopati, psicologi, TNPEE e altri
+            professionisti, lavora in sinergia per costruire interventi personalizzati che rispondano alle specifiche
+            esigenze di ciascun paziente, promuovendo un miglioramento concreto e duraturo dello stato di salute.
+          </p>
+          <div class="button-right">
+            <a href="/contatti" class="btn text-white rounded-pill px-4"
+              style="background-color:#4ba2a6; text-decoration:none;">
+              FISSA UN PRIMO INCONTRO
+            </a>
+          </div>
+        </div>
+      </div>
       <div class="col-12 col-md-6">
         <div class="h-100 p-3 rounded">
           <div class="yellow-image">
@@ -230,31 +355,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="h-100 p-3 rounded">
-          <h1 style="font-weight: bold;">Benvenuti a Studio Pitagora</h1>
-          <h3 style="font-weight: bold;">Il nostro approccio</h3>
-          {% include "cerchi.html" %}
-          <p>A Studio Pitagora mettiamo al centro la persona, creando un percorso di supporto clinico che nasce
-            dall'ascolto attento e dalla fiducia reciproca.
-            Crediamo che ogni difficoltà, sia essa di natura logopedica, posturale, fisica o emotiva, vada affrontata
-            con un approccio integrato e su misura.
-            <br><br>
-            Accogliamo bambini, adolescenti, adulti e famiglie offrendo consulenze e trattamenti pensati per
-            accompagnare ogni fase della vita, favorendo sviluppo, equilibrio e benessere.
-            <br><br>
-            Il nostro team multidisciplinare, composto da logopedisti, osteopati, psicologi, TNPEE e altri
-            professionisti, lavora in sinergia per costruire interventi personalizzati che rispondano alle specifiche
-            esigenze di ciascun paziente, promuovendo un miglioramento concreto e duraturo dello stato di salute.
-          </p>
-          <div class="button-right">
-            <a href="/contatti" class="btn text-white rounded-pill px-4"
-              style="background-color:#4ba2a6; text-decoration:none;">
-              FISSA UN PRIMO INCONTRO
-            </a>
           </div>
         </div>
       </div>
@@ -322,103 +422,6 @@
             </div>
 
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mio" style="background-color: #C3D1CA;">
-    <div class="row gx-3 gy-3 h-100">
-      <div class="col-12 col-md-6">
-        <div class="h-100 p-3 rounded"> <img src="{{ url_for('static', filename='images/foto_palazzo.JPG') }}"
-            class="img-fluid object-fit-cover" style="border-radius: 20px;">
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="h-100 p-3 rounded">
-          <h4 style="color: #3b8d91;">Perchè sceglierci</h4>
-          <h2 style="font-weight: bold;">Studio Pitagora - Servizi Integrati per il benessere e lo sviluppo della
-            persona</h2>
-          {% include "cerchi.html" %}
-          <p>
-            <span style="font-weight: bold;">Studio Pitagora</span> è un centro dedicato alla presa in carico di bisogni
-            complessi in ambito evolutivo, educativo, clinico e relazionale. Accogliamo bambini, adolescenti, adulti e
-            nuclei familiari, offrendo interventi mirati attraverso un approccio multidisciplinare fondato
-            sull'ascolto, sulla competenza e sulla costruzione di un'alleanza terapeutica. <br>Il nostro team di
-            professionisti elabora percorsi personalizzati, con l'obiettivo di promuovere il benessere globale della
-            persona e sostenere i contesti educativi e sociali in cui è inserita.
-          </p>
-          <br>
-          <div class="button-right">
-            <button>La nostra missione</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mio" style="background-color: #C18774;">
-    <div class="row gx-3 gy-3 h-100">
-      <div class="col-12 col-md-6">
-        <div class="h-100 p-3 rounded">
-          <h3 style="font-weight: bold;">Studio Pitagora: Armonia, Coraggio e Cura</h3>
-          {% include "cerchi.html" %}
-          <p>
-            Il nostro studio prende ispirazione da Pitagora, filosofo e matematico che vedeva nell'armonia e
-            nell'equilibrio le chiavi per comprendere il mondo e l'essere umano.
-            Seguendo questa filosfia millenaria, poniamo la cura delle persone al centro di ogni percorso, con il
-            coraggio e la determinazione necessari per affontar le sfide quotidiane.<br><br>
-            Studio Pitagora non è un semplice spazio di lavoro condiviso ma un luogo dove conoscenze e competenze si
-            intrecciano come note di una sinfonia, dando vita a un approccio integrato e innovativo.
-            Qui la collaboraizone tra professionisti diventa il motore per offrire servizi personalizzati pensati per
-            raggiungere un equilibrio autentico tra mente, corpo e benessere. <br><br>
-            Attrverso lo scambio continuo e la co-creazione, costruiamo percorsi su misura, in cui l'armonia tra le
-            diverse discipline si traduce in una cura completa e profonda della persona.
-          </p>
-          <div class="my-2" style="background-color: white; border-radius: 10px; height: 120px; margin-left: 50px;">
-            <div class="container">
-              <div class="row">
-                <div class="col-3"><img src="{{url_for('static', filename='images/spirale.jpg') }}"
-                    class="img-fluid w-70 h-70 object-fit-cover" style="border-radius: 20px;"></div>
-                <div class="col-9">
-                  <h4 style="font-weight: bold;">Armonia integrata</h4>
-                  <p>Prendersi cura delle persone significa creare equilibrio tra mente, corpo e spirito, riconoscendo
-                    che ogni aspetto è parte di un tutto unico e interconnesso</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="my-2" style="background-color: #87B5C4; border-radius: 10px; height: 120px; margin-right: 50px;">
-            <div class="container">
-              <div class="row">
-                <div class="col-3"><img src="{{url_for('static', filename='images/mani.jpg') }}"
-                    class="img-fluid w-70 h-70 object-fit-cover" style="border-radius: 20px;"></div>
-                <div class="col-9">
-                  <h4 style="font-weight: bold;">Collaborazione concreta</h4>
-                  <p>La sinergia tra professionisti nasce da una comunicazione efficace e un lavoro coordinato, per
-                    offrire soluzioni complete e realmente efficaci.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="my-2" style="background-color: white; border-radius: 10px; height: 120px; margin-left: 50px;">
-            <div class="container">
-              <div class="row">
-                <div class="col-3"><img src="{{url_for('static', filename='images/atomo.jpg') }}"
-                    class="img-fluid w-60 h-60 object-fit-cover" style="border-radius: 20px;"></div>
-                <div class="col-9">
-                  <h4 style="font-weight: bold;">Approccio basato sull'evidenza</h4>
-                  <p>Ogni intervento si fonda su conoscenze aggiornate e dati concreti, per garantire trattamenti
-                    affidabili, responsabili e personalizzati.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6">
-        <div class="h-100 p-3 rounded"> <img src="{{ url_for('static', filename='images/foto_palazzo.JPG') }}"
-            class="img-fluid w-100 h-100 object-fit-cover" style="border-radius: 20px;">
         </div>
       </div>
     </div>

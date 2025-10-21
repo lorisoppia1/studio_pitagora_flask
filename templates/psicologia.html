@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Psicologia dell'età evolutiva / Tutor DSA</title>
+  <title>Psicologia</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -12,24 +12,74 @@
 
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      height: 100vh;
+      display: grid;
+      place-items: center;
     }
   </style>
 </head>
 
 <body>
 
-  <div style="height: 140px; background-color: #7B8580;">
+  <div style="height: 140px; background-color: #C18774;">
     {% include "navbar.html" %}
   </div>
 
-  <div style="height:80vh; display:flex; justify-content:center; align-items:center; background:#f8f9fa;">
-    <div class="text-center">
-      <i class="bi bi-tools" style="font-size:4rem; color:#4ba2a6;"></i>
-      <h2 class="mt-3">Pagina in manutenzione</h2>
+  <div class="container">
+    <div class="row">
+
+      <div class="col p-5 bg-light">
+        <h3 class="fw-bold">Psicologia</h3>
+        {% include "cerchi.html" %}
+        <p>
+          Sono una psicologa e mi occupo di età evolutiva. Ho conseguito la laurea magistrale in
+          Psicologia - Neuroscienze presso l’Università degli Studi di Trento e sono regolarmente
+          iscritta all’Albo degli Psicologi del Veneto (n. 12327). Ho successivamente frequentato un
+          master post-universitario sui Disturbi Specifici dell’Apprendimento.
+          Durante la mia formazione ho approfondito l’ambito della neuropsicologia dell’età evolutiva
+          ed in particolare dei disturbi del neurosviluppo con un tirocinio presso ODFLab -
+          Laboratorio di Osservazione, Diagnosi e Formazione di Rovereto, centro di riferimento
+          nazionale per la diagnosi funzionale di autismo, disturbi specifici dell’apprendimento e del
+          comportamento.
+          Inoltre, ho svolto un’ulteriore esperienza formativa presso l’UOC Infanzia, Adolescenza e
+          Famiglia dell’ULSS9 di Verona.
+          Negli anni ho integrato la mia formazione con diversi corsi su tutoring scolastico, metodo
+          di studio e potenziamento cognitivo attraverso il gioco.
+          Dal 2022 sono libera professionista e lavoro con bambini e adolescenti con disturbi
+          specifici dell’apprendimento, disturbi dell’attenzione o difficoltà scolastiche, anche in
+          assenza di disturbi specifici.
+          L’approccio proposto comprende l’utilizzo di materiale strutturato, software, albi illustrati e
+          giochi scelti accuratamente per le esigenze di ogni singolo paziente perché sono
+          fermamente convinta che un intervento che comprenda anche aspetti ludici sia più
+          motivante per il bambino e funzionale nel raggiungimento degli obiettivi.
+          <br><br>
+
+          Presso Studio Pitagora mi occupo di: <br><br>
+        <ul>
+          <li>Valutazione in caso di difficoltà scolastiche</li>
+          <li>Diagnosi e intervento nei Disturbi Specifici dell’Apprendimento e Disturbo da Deficit
+            dell’Attenzione e Iperattività</li>
+          <li>Potenziamento cognitivo, degli apprendimenti e delle funzioni esecutive</li>
+          <li>Tutoring specializzato per difficoltà scolastiche e supporto al metodo di studio</li>
+          <li>Screening e potenziamento dei prerequisiti dell’apprendimento per bambini
+            all’ultimo anno di scuola materna
+        </ul>
+        <div class="button-right">
+          <a href="mailto:psicologaventurinigreta@gmail.com" class="btn text-white rounded-pill px-4"
+            style="background-color:#C18774; text-decoration:none;">
+            PRENOTA UNA PRIMA CONSULENZA
+          </a>
+        </div>
+      </div>
+      <div class="col p-5 bg-light">
+        <img src="{{url_for('static', filename='images/greta.png') }}" class="rounded-circle"
+          style="width: 400px; height: 400px; object-fit: cover;">
+      </div>
     </div>
   </div>
-
   {% include "footer.html" %}
 </body>
 

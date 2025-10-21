@@ -12,8 +12,16 @@
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logosenzasfondo.png') }}">
 
   <style>
-    body {
+    /* body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    } */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      height: 100vh;
+      display: grid;
+      place-items: center;
     }
   </style>
 </head>
@@ -101,8 +109,8 @@
                   <label class="form-check-label" for="opzione5">Osteopatia D.O. e Chinesiologia</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="services" value="Massoterapia">
-                  <label class="form-check-label" for="opzione6">Massoterapia</label>
+                  <input class="form-check-input" type="checkbox" name="services" value="Fisioterapia">
+                  <label class="form-check-label" for="opzione6">Fisioterapia</label>
                 </div>
               </div>
             </div>

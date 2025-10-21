@@ -55,15 +55,13 @@ def page(name):
 @app.route('/new_request', methods=['POST'])
 def new_request():
     data = request.json
-    services_list = data.get('services', [])
-    services_str = ", ".join(services_list)
     record = Request(
-        firstname=data.get('firstname', ''),
-        lastname=data.get('lastname', ''),
-        email=data.get('email', ''),
-        phone=data.get('phone', ''),
-        message=data.get('message', ''),
-        services=services_str
+        firstname = data.get('firstname', ''),
+        lastname = data.get('lastname', ''),
+        email = data.get('email', ''),
+        phone = data.get('phone', ''),
+        message = data.get('message', ''),
+        services = ", ".join(data.get('services', []))
     )
     db.session.add(record)
     db.session.commit()
@@ -82,3 +80,6 @@ if __name__ == '__main__':
 # ultima slide sistema icona e grandezza dei div, sistema grandezze immagini
 # metti quadrato azzurro/bianco in base al colore del div, cioè icona con sfondo blu sul div bianco e viceversa
 # metti pagina in manutenzione su tutte le pagine tranne logopedia
+
+# le foto si spostano in base allo schermo
+# nelle pagine in manutenzione sistemare parte centrale

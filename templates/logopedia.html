@@ -12,7 +12,12 @@
 
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      height: 100vh;
+      display: grid;
+      place-items: center;
     }
   </style>
 </head>
@@ -27,7 +32,8 @@
     <div class="row">
       <div class="col p-5 bg-light">
 
-        <img src="{{url_for('static', filename='images/imm_1.jpeg') }}" class="img-fluid w-100 h-100 object-fit-cover">
+        <img src="{{url_for('static', filename='images/foto_logopedia.JPG') }}"
+          class="img-fluid w-100 h-100 object-fit-cover">
       </div>
       <div class="col p-5 bg-light">
         <h3 class="fw-bold">Logopedia</h3>
@@ -56,19 +62,18 @@
           <li>definizione di piani di trattamento, anche in un’ottica multidisciplinare, in collaborazione con le altre
             figure del team.</li>
         </ul>
-        <h5 class="fw-bold">Il nostro approccio</h5>
+        <h5 class="fw-bold">Il nostro team</h5>
         Il nostro team è composto da logopedisti altamente qualificati, ciascuno con competenze specifiche in diversi
         ambiti della logopedia, per offrire interventi mirati, aggiornati e di elevata professionalità. <br>
         Grazie a un confronto costante e a un lavoro di squadra sinergico, possiamo garantire ai pazienti e alle loro
         famiglie una presa in carico completa, equilibrata ed efficace.
         </p>
         <div class="button-right">
-          <a href="/contatti" class="btn text-white rounded-pill px-4"
+          <a href="mailto:alessandro@logopedistarigamonti.com" class="btn text-white rounded-pill px-4"
             style="background-color:#C18774; text-decoration:none;">
             PRENOTA UNA PRIMA CONSULENZA
           </a>
         </div>
-
       </div>
     </div>
   </div>
@@ -77,7 +82,7 @@
     <div class="row">
 
       <div class="col-8 p-5 bg-light">
-        <h4 class="fw-bold">Logopedista</h4>
+        <h4 class="fw-bold">Coordinatore e Logopedista</h4>
         <h3 class="fw-bold">Dott. Alessandro Rigamonti</h3>
         {% include "cerchi.html" %}
         <p>
@@ -98,6 +103,26 @@
         <img src="{{url_for('static', filename='images/foto_ale.png') }}" class="rounded-circle"
           style="width: 200px; height: 200px; object-fit: cover;">
       </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4 p-5 bg-light d-flex justify-content-center align-items-center">
+        <img src="{{url_for('static', filename='images/flavia.png') }}" class="rounded-circle"
+          style="width: 200px; height: 200px; object-fit: cover;">
+      </div>
+
+      <div class="col-8 p-5 bg-light">
+        <h3 class="fw-bold">Dott.ssa Flavia Indellicati</h3>
+        {% include "cerchi.html" %}
+        <p>
+          Sono laureata in Logopedia, Università di Medicina e Chirurgia di Verona.
+          Tutor per i Disturbi di Apprendimento (DSA) e Iperattività (ADHD), Consorzio Universitario Humanitas.
+               </p>
+      </div>
+
 
     </div>
   </div>

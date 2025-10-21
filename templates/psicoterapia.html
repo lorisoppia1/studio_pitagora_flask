@@ -12,24 +12,84 @@
 
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      height: 100vh;
+      display: grid;
+      place-items: center;
     }
   </style>
 </head>
 
 <body>
 
-  <div style="height: 140px; background-color: #7B8580;">
+  <div style="height: 140px; background-color: #C18774;">
     {% include "navbar.html" %}
   </div>
 
-  <div style="height:80vh; display:flex; justify-content:center; align-items:center; background:#f8f9fa;">
-    <div class="text-center">
-      <i class="bi bi-tools" style="font-size:4rem; color:#4ba2a6;"></i>
-      <h2 class="mt-3">Pagina in manutenzione</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col p-5 bg-light">
+        <img src="{{url_for('static', filename='images/gloria.png') }}" class="rounded-circle"
+          style="width: 400px; height: 400px; object-fit: cover;">
+      </div>
+      <div class="col p-5 bg-light">
+        <h3 class="fw-bold">Psicoterapia</h3>
+        {% include "cerchi.html" %}
+        <p>
+          Sono Psicologa Clinica e Psicoterapeuta.
+          Mi sono laureata in psicologia clinica con lode presso l’università Alma Mater Studiorum di
+          Bologna per poi specializzarmi in Psicoterapia Cognitivo Costruttivista ad indirizzo evolutivo
+          presso la Scuola Bolognese di Psicoterapia Cognitiva (S.B.P.C.). Sono abilitata all’esercizio della
+          professione e regolarmente iscritta all’Ordine degli Psicologi della regione Emilia Romagna (n°
+          8955)
+          Durante il percorso di formazione ho acquisito esperienza clinica in un tirocinio pluriennale presso
+          Casa di Cura “Ai Colli” di Bologna, ospedale per la cura di persone con disturbi psicologici e
+          psichiatrici, dipendenza da alcol e sostanze. Ho inoltre svolto delle esperienze formative presso
+          l’Ospedale Santa Giuliana di Verona, ospedale classificato per la riabilitazione psicosociale; ed il
+          Centro di Neuropsichiatria Infantile ASL di Bologna.
+          Sono socia della Società Italiana di Terapia Cognitivo-Comportamentale (SITCC).
+          Ho iniziato a lavorare come libera professionista nel 2019 presso l’associazione “MondoDonna
+          Onlus” all’interno di strutture accoglienti nuclei mamma-bambino, vittime di violenza e madri in
+          difficoltà nello svolgimento delle funzioni genitoriali, svolgendo altresì la funzione di tutela dei
+          minori durante gli incontri protetti a seconda dei provvedimenti dell’Autorità Giudiziaria.
+          Successivamente ho iniziato a svolgere la funzione di sostegno nelle scuole primarie e secondarie di
+          primo grado per poi rimanere all’interno del sistema scuola, proponendo progetti come psicologa
+          scolastica.
+          L’approccio psicoterapico proposto è di tipo <span style="font-weight: bold;">Cognitivo Costruttivista</span>
+          ossia volto alla
+          comprensione del sintomo, attraverso la costruzione di una <span style="font-weight: bold;">relazione
+            terapeutica rispettosa delle
+            caratteristiche di ciascuno</span>, delle sue esperienze d’attaccamento e della sua più ampia
+          organizzazione cognitiva, emotiva e comportamentale.
+          L'obiettivo non è soltanto quello di ridurre la sintomatologia, ma soprattutto di <span
+            style="font-weight: bold;">aiutare</span> la persona <span style="font-weight: bold;">a
+            comprendere i motivi</span> relativi al momento <span style="font-weight: bold;">di disagio in relazione ai
+            propri contesti di vita</span>.
+          Questo allo scopo di <span style="font-weight: bold;">fare diventare la persona "esperta" di sé stessa</span>,
+          in grado di reagire a fronte
+          di nuove situazioni.
+          <br><br>
+
+          Presso Studio Pitagora mi occupo di: <br><br>
+        <ul>
+          <li>Psicoterapia per bambini con difficoltà nella regolazione emotiva e comportamentale</li>
+          <li>Psicoterapia volta ad accompagnare gli adolescenti durante il percorso di crescita</li>
+          <li>Counselling per studenti universitari</li>
+          <li>Psicoterapia per adulti anche in assenza di un disturbo psichico specifico, ma solo per
+            migliorare il proprio benessere generale.</li>
+          <li>Consulenze genitoriali individuali o di coppia</li>
+        </ul>
+        <div class="button-right">
+          <a href="mailto:calzolarigloria@gmail.com" class="btn text-white rounded-pill px-4"
+            style="background-color:#C18774; text-decoration:none;">
+            PRENOTA UNA PRIMA CONSULENZA
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-
   {% include "footer.html" %}
 </body>
 

@@ -12,24 +12,67 @@
 
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      height: 100vh;
+      display: grid;
+      place-items: center;
     }
   </style>
 </head>
 
 <body>
 
-  <div style="height: 140px; background-color: #7B8580;">
+  <div style="height: 140px; background-color: #C18774;">
     {% include "navbar.html" %}
   </div>
 
-  <div style="height:80vh; display:flex; justify-content:center; align-items:center; background:#f8f9fa;">
-    <div class="text-center">
-      <i class="bi bi-tools" style="font-size:4rem; color:#4ba2a6;"></i>
-      <h2 class="mt-3">Pagina in manutenzione</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col p-5 bg-light">
+        <img src="{{url_for('static', filename='images/michele.png') }}" class="rounded-circle"
+          style="width: 400px; height: 400px; object-fit: cover;">
+      </div>
+      <div class="col p-5 bg-light">
+        <h3 class="fw-bold">Fisioterapia</h3>
+        {% include "cerchi.html" %}
+        <p>
+          Ho conseguito la laurea in Fisioterapia nel 2018 presso l’Università degli Studi di Verona,
+          durante la quale ho svolto numerosi tirocini in diversi ambiti (ortopedico, neurologico, età
+          evolutiva, geriatrico, area critica).
+          Sono abilitato all'esercizio della professione e regolarmente iscritto all’Albo FNOFI di Verona,
+          numero 1197. <br><br>
+          Dopo la laurea la mia formazione è proseguita attraverso i corsi di Terapia Manuale
+          (Concetto Maitland, livello 1, 2A, 2B) presso la sede di Brescia e di Manipolazione Fasciale
+          (Metodo Stecco, livello 1, 2) presso la sede di Milano.
+          Attualmente sto frequentando il Master in Osteopatia nei Disturbi Neuro-Muscoloscheletrici
+          (inizio 2025, EOM Università di Medicina e Chirurgia di Verona).<br><br>
+          Dal 2019 lavoro come libero professionista, occupandomi di pazienti con problematiche
+          neuro-muscoloscheletriche.
+          Il mio approccio combina sedute di terapia manuale a lettino, con esercizi mirati per la
+          persona che possano aiutare a consolidare i risultati ottenuti.<br><br>
+
+          Presso Studio Pitagora mi occupo di:
+
+        <ul>
+          <li>Traumi e Infortuni</li>
+          <li>Patologie cronico/degenerative</li>
+          <li>Problemi posturali</li>
+          <li>Riabilitazione post-operatoria</li>
+          <li>Ernie e Sindromi radicolari (sciatalgie, cervicobrachialgie)</li>
+        </ul>
+        <br><br>
+        <div class="button-right">
+          <a href="mailto:michele.bottura@hotmail.it" class="btn text-white rounded-pill px-4"
+            style="background-color:#C18774; text-decoration:none;">
+            PRENOTA UNA PRIMA CONSULENZA
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
-
   {% include "footer.html" %}
 </body>
 

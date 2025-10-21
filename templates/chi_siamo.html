@@ -12,7 +12,12 @@
 
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      height: 100vh;
+      display: grid;
+      place-items: center;
     }
   </style>
 </head>
@@ -36,7 +41,10 @@
         <h5>Cosa è Studio Pitagora</h5>
         {% include "cerchi.html" %}
         <p>
-          Nel cuore pulsante di Borgo Nuovo, a Verona, Studio Pitagora nasce come un punto di riferimento innovativo e
+          Nel cuore pulsante di
+          <span style="font-weight: bold;">Borgo Nuovo</span>, a Verona, Studio Pitagora nasce come un punto di
+          riferimento
+          innovativo e
           facilmente raggiungibile per chi cerca servizi polispecialistici di qualità, comodamente a portata di mano. La
           nostra posizione strategica, vicina alle principali vie di comunicazione e ai mezzi pubblici, rende ogni
           visita semplice e senza stress, ideale per famiglie e professionisti con ritmi serrati.
@@ -46,15 +54,21 @@
           professionisti che operano all'interno dello studio, Studio Pitagora è in grado di offrire una copertura
           completa e coordinata di tutte le esigenze di salute e benessere dei pazienti.
           <br><br>
-          Una rete di servizi specialistici uniti per assicurare un'assistenza globale e continua, senza spersioni
+          <span style="font-weight: bold;">Una rete di servizi specialistici</span> uniti per assicurare un'assistenza
+          globale e continua, senza spersioni
           o lunghe attese.
           <br><br>
-          Offriamo percorsi terapeutici personalizzati per bambini, adulti e famiglie, in un ambiente accogliente che
-          mette al centro l'ascolto e la cura della persona. La nostra missione è accompagnare chi affronta difficoltà
+          Offriamo <span style="font-weight: bold;">percorsi terapeutici personalizzati</span> per bambini, adulti e
+          famiglie, in un <span style="font-weight: bold;">ambiente</span> accogliente che
+          mette al centro l'<span style="font-weight: bold;">ascolto</span> e la <span style="font-weight: bold;">cura
+            della persona</span>. La nostra missione è <span style="font-weight: bold;">accompagnare</span> chi affronta
+          difficoltà
           di natura fisica, psicologica o sociale, grazie a un team di professionisti qualificati con
           competenze diversificate.
           <br><br>
-          Con trattamenti su misura e una visione integrata, Studio Pitagora sostiene ogni fase della vita, promuovendo
+          Con <span style="font-weight: bold;">trattamenti su misura</span> e una <span
+            style="font-weight: bold;">visione integrata</span>, Studio Pitagora sostiene ogni fase della vita,
+          promuovendo
           salute, equilibrio e benessere duraturo, con la comodità di un punto di riferimento completo e facilmente
           accessibile nel quartiere Borgo Nuovo.
         </p>
@@ -75,17 +89,29 @@
         <h1>La nostra storia</h1>
       </div>
       <div class="col p-5 bg-light" style="background-color: #C18774;">
-
-        <h4 class="mb-3">La nascita di un'idea</h4>
-        <p>L'estate del 2023 ha segnato l'inizio di un sogno che prendeva forma nella mia mente: creare uno spazio dove
-          professionalità, ascolto e cura potessero convivere in modo integrato e a misura di persona. Da quell'idea, è
-          partita tutta la progettazione e l'organizzazione necessaria per dare vita a uno studio polispecialistico nel
-          cuore di Borgo Nuovo, Verona.
-          <br><br>
-          Dopo mesi di lavoro, impegno e attenzione ai dettagli, lo studio è finalmente nato il 1 dicembre 2023, una
-          data che ha un significato speciale: il compleanno del mio primogenito. Un simbolo di nuova vita e nuove
-          possibilità, proprio come lo è Studio Pitagora.
-        </p>
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              <img src="{{ url_for('static', filename='images/primo_post.PNG') }}" style="width: 85%; height: auto;">
+            </div>
+            <div class="col-9">
+              <h4 class="mb-3">La nascita di un'idea</h4>
+              <p>L'estate del 2023 ha segnato l'inizio di un sogno che prendeva forma nella mia mente: creare uno spazio
+                dove
+                professionalità, ascolto e cura potessero convivere in modo integrato e a misura di persona. Da
+                quell'idea, è
+                partita tutta la progettazione e l'organizzazione necessaria per dare vita a uno studio
+                polispecialistico nel
+                cuore di Borgo Nuovo, Verona.
+                <br><br>
+                Dopo mesi di lavoro, impegno e attenzione ai dettagli, lo studio è finalmente nato il 1 dicembre 2023,
+                una
+                data che ha un significato speciale: il compleanno del mio primogenito. Un simbolo di nuova vita e nuove
+                possibilità, proprio come lo è Studio Pitagora.
+              </p>
+            </div>
+          </div>
+        </div>
 
         {% include "cerchi.html" %}
         <h4 class="mb-3">Le prime collaborazioni</h4>

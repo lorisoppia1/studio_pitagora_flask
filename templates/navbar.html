@@ -109,6 +109,189 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+  /* Hamburger menu button - nascosto su desktop */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 5px;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #4ba2a6;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* Nascondi il pulsante mobile su desktop */
+  .mobile-prenota-btn {
+    display: none;
+  }
+
+  /* Media queries per tablet */
+  @media screen and (max-width: 1024px) {
+    .navbar {
+      width: 85%;
+      padding: 0 20px;
+    }
+
+    .links {
+      gap: 30px;
+      font-size: 14px;
+    }
+
+    .button-right button {
+      padding: 10px 20px;
+      font-size: 12px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+  }
+
+  /* Media queries per smartphone */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      width: 90%;
+      height: 60px;
+      margin: 20px auto 0;
+      padding: 0 15px;
+      border-radius: 30px;
+    }
+
+    .logo img {
+      height: 35px;
+    }
+
+    .hamburger {
+      display: flex;
+      order: 3;
+    }
+
+    /* Nascondi il pulsante dalla navbar su mobile */
+    .navbar > .button-right {
+      display: none;
+    }
+
+    .links {
+      position: fixed;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      background-color: white;
+      flex-direction: column;
+      gap: 0;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: none;
+      z-index: 9;
+    }
+
+    .links.active {
+      display: flex;
+    }
+
+    .links a {
+      padding: 15px 10px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .links a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown {
+      width: 100%;
+    }
+
+    .dropdown-content {
+      position: static;
+      transform: none;
+      display: none;
+      padding: 10px 0 10px 20px;
+      box-shadow: none;
+      background-color: #f8f8f8;
+    }
+
+    .dropdown.active .dropdown-content {
+      display: block;
+    }
+
+    /* Pulsante PRENOTA dentro il menu mobile */
+    .mobile-prenota-btn {
+      display: block;
+      width: 100%;
+      background-color: #4ba2a6;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 40px;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 15px;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .mobile-prenota-btn:hover {
+      background-color: #3b8d91;
+    }
+  }
+
+  /* Media queries per schermi molto piccoli */
+  @media screen and (max-width: 480px) {
+    .navbar {
+      width: 95%;
+      height: 55px;
+      padding: 0 10px;
+    }
+
+    .logo img {
+      height: 30px;
+    }
+
+    .links {
+      top: 85px;
+      width: 95%;
+      padding: 15px;
+    }
+
+    .links a {
+      font-size: 14px;
+      padding: 12px 8px;
+    }
+
+    .hamburger span {
+      width: 22px;
+    }
+  }
 </style>
 
 <div class="navbar text-uppercase">
@@ -116,11 +299,11 @@
     <a href="/chi_siamo"><img src="{{ url_for('static', filename='images/logosenzasfondo.png') }}"
         alt="Studio Pitagora"></a>
   </div>
-  <div class="links">
+  <div class="links" id="navLinks">
     <a href="/">Home</a>
     <a href="/chi_siamo">Chi siamo</a>
-    <div class="dropdown">
-      <a href="#">Servizi <i class="bi bi-chevron-down"></i></a>
+    <div class="dropdown" id="dropdownMenu">
+      <a href="#" onclick="toggleDropdown(event)">Servizi <i class="bi bi-chevron-down"></i></a>
       <div class="dropdown-content">
         <a href="/logopedia">Logopedia</a>
         <a href="/psicoterapia">Psicoterapia</a>
@@ -131,9 +314,63 @@
       </div>
     </div>
     <a href="/contatti">Contatti</a>
+    <!-- Pulsante PRENOTA visibile solo su mobile -->
+    <button class="mobile-prenota-btn" onclick="window.location.href='mailto:alessandro@logopedistarigamonti.com'">
+      PRENOTA <i class="bi bi-arrow-right-circle-fill"></i>
+    </button>
   </div>
-  <div class="button-right">
+  <div class="button-right" id="navButton">
     <button onclick="window.location.href='mailto:alessandro@logopedistarigamonti.com'">PRENOTA <i
         class="bi bi-arrow-right-circle-fill"></i></button>
   </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </div>
+
+<script>
+  function toggleMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  }
+
+  function toggleDropdown(event) {
+    // Solo su mobile (larghezza schermo < 768px)
+    if (window.innerWidth <= 768) {
+      event.preventDefault();
+      const dropdown = document.getElementById('dropdownMenu');
+      dropdown.classList.toggle('active');
+    }
+  }
+
+  // Chiudi il menu quando si clicca su un link (tranne il dropdown)
+  document.querySelectorAll('.links a:not(.dropdown a)').forEach(link => {
+    link.addEventListener('click', function () {
+      if (window.innerWidth <= 768) {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      }
+    });
+  });
+
+  // Chiudi il menu quando si ridimensiona la finestra sopra 768px
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 768) {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      const dropdown = document.getElementById('dropdownMenu');
+
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      dropdown.classList.remove('active');
+    }
+  });
+</script>

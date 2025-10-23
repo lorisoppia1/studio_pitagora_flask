@@ -15,9 +15,178 @@
       margin: 0;
       padding: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      height: 100vh;
+      /* height: 100vh;
       display: grid;
-      place-items: center;
+      place-items: center; */
+    }
+
+    /* Stili responsive per le card principali */
+    .content-card {
+      background-color: #C18774;
+      border-radius: 20px;
+    }
+
+    .content-image {
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-image {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    /* Media queries per tablet */
+    @media screen and (max-width: 1024px) {
+      .content-card {
+        padding: 2rem !important;
+      }
+
+      .profile-image {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    /* Media queries per smartphone */
+    @media screen and (max-width: 768px) {
+      body {
+        padding-bottom: 20px;
+      }
+
+      .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      /* Container navbar responsive */
+      .container[style*="height: 140px"] {
+        height: auto !important;
+        min-height: 80px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.5rem !important;
+      }
+
+      /* Stack delle colonne su mobile */
+      .row>.col,
+      .row>[class*="col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+      }
+
+      .content-card {
+        padding: 1.5rem !important;
+        border-radius: 15px !important;
+        margin-bottom: 1rem;
+      }
+
+      /* Bordi arrotondati su mobile - tutti i lati */
+      .content-card[style*="border-top-left-radius"],
+      .content-card[style*="border-bottom-left-radius"],
+      .content-card[style*="border-top-right-radius"],
+      .content-card[style*="border-bottom-right-radius"] {
+        border-radius: 15px !important;
+      }
+
+      /* Immagini responsive */
+      .profile-image {
+        width: 200px;
+        height: 200px;
+        display: block;
+        margin: 0 auto 1rem;
+      }
+
+      .content-image {
+        min-height: 200px;
+        margin-bottom: 1rem;
+      }
+
+      /* Testo e titoli */
+      h1 {
+        font-size: 1.75rem !important;
+      }
+
+      h3 {
+        font-size: 1.5rem !important;
+      }
+
+      h4 {
+        font-size: 1.25rem !important;
+      }
+
+      h5 {
+        font-size: 1.1rem !important;
+      }
+
+      p {
+        font-size: 0.95rem !important;
+      }
+
+      /* Bottone prenota */
+      .button-right a {
+        display: block;
+        text-align: center;
+        padding: 12px 20px !important;
+        font-size: 0.9rem !important;
+      }
+
+      /* Sezione contatto */
+      .d-flex.align-items-center {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px;
+      }
+
+      .d-flex.align-items-center span {
+        font-size: 0.9rem;
+      }
+
+      .d-flex.align-items-center a {
+        width: 100%;
+      }
+
+      .d-flex.align-items-center a>div {
+        width: 100%;
+        padding: 12px !important;
+      }
+    }
+
+    /* Media queries per schermi molto piccoli */
+    @media screen and (max-width: 480px) {
+      .content-card {
+        padding: 1rem !important;
+      }
+
+      .profile-image {
+        width: 150px;
+        height: 150px;
+      }
+
+      h1 {
+        font-size: 1.5rem !important;
+      }
+
+      h3 {
+        font-size: 1.3rem !important;
+      }
+
+      h4 {
+        font-size: 1.1rem !important;
+      }
+
+      p {
+        font-size: 0.9rem !important;
+      }
+
+      /* Riduzione immagine storia */
+      .col-3 img {
+        width: 100% !important;
+        margin-bottom: 1rem;
+      }
     }
   </style>
 </head>
@@ -30,13 +199,10 @@
 
   <div class="container mt-3">
     <div class="row">
-      <div class="col p-5"
-        style="background-color: #C18774; border-top-left-radius:20px; border-bottom-left-radius:20px;">
-        <img src="{{url_for('static', filename='images/foto_studio_nuovo.jpg') }}"
-          class="img-fluid w-100 h-100 object-fit-cover" style="border-radius: 20px;">
+      <div class="col p-5 content-card" style="border-radius:20px 0 0 20px;">
+        <img src="{{url_for('static', filename='images/foto_studio_nuovo.jpg') }}" class="img-fluid content-image">
       </div>
-      <div class="col p-5"
-        style="background-color: #C18774; border-top-right-radius:20px; border-bottom-right-radius:20px;">
+      <div class="col p-5 content-card" style="border-radius:0 20px 20px 0;">
         <h3 class="fw-bold">Studio di Logopedia e polispecialitico</h3>
         <h5>Cosa è Studio Pitagora</h5>
         {% include "cerchi.html" %}
@@ -55,7 +221,7 @@
           completa e coordinata di tutte le esigenze di salute e benessere dei pazienti.
           <br><br>
           <span style="font-weight: bold;">Una rete di servizi specialistici</span> uniti per assicurare un'assistenza
-          globale e continua, senza spersioni
+          globale e continua, senza spensioni
           o lunghe attese.
           <br><br>
           Offriamo <span style="font-weight: bold;">percorsi terapeutici personalizzati</span> per bambini, adulti e
@@ -88,7 +254,7 @@
       <div class="bg-light mt-5" style="display:flex; justify-content:center; align-items:center;">
         <h1>La nostra storia</h1>
       </div>
-      <div class="col p-5 bg-light" style="background-color: #C18774;">
+      <div class="col p-5 bg-light content-card">
         <div class="container">
           <div class="row">
             <div class="col-3">
@@ -157,7 +323,7 @@
   <div class="container my-3">
     <div class="row">
 
-      <div class="col-7 p-5 bg-light">
+      <div class="col-7 p-5 bg-light content-card">
         <h3 class="fw-bold">Dott. Alessandro Rigamonti</h3>
         {% include "cerchi.html" %}
         <p>
@@ -206,9 +372,8 @@
           terapeutico.
         </p>
       </div>
-      <div class="col-5 p-5 bg-light">
-        <img src="{{url_for('static', filename='images/foto_ale.png') }}" class="rounded-circle"
-          style="width: 300px; height: 300px; object-fit: cover;">
+      <div class="col-5 p-5 bg-light content-card">
+        <img src="{{url_for('static', filename='images/foto_ale.png') }}" class="rounded-circle profile-image">
         <div class="d-flex align-items-center my-3">
           <i class="bi bi-telephone-fill me-2" style="color: #5F7784;"></i>
           <span>Dott. Alessandro Rigamonti: +39 349 286 5895</span>

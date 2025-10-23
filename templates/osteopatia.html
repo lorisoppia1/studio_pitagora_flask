@@ -15,22 +15,139 @@
       margin: 0;
       padding: 0;
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      height: 100vh;
+      /* height: 100vh;
       display: grid;
-      place-items: center;
+      place-items: center; */
+    }
+
+    .header-container {
+      height: 160px;
+      background-color: #C44325;
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-image {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    /* Media queries per tablet */
+    @media screen and (max-width: 1024px) {
+      .header-container {
+        height: auto;
+        min-height: 100px;
+        padding: 15px 0;
+      }
+
+      .profile-image {
+        width: 300px;
+        height: 300px;
+      }
+
+      .col.p-5 {
+        padding: 2rem !important;
+      }
+    }
+
+    /* Media queries per smartphone */
+    @media screen and (max-width: 768px) {
+      body {
+        padding-bottom: 20px;
+      }
+
+      .header-container {
+        height: auto;
+        min-height: 90px;
+        padding: 10px 0;
+      }
+
+      .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      /* Stack delle colonne su mobile */
+      .row>.col,
+      .row>[class*="col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+      }
+
+      /* Padding ridotto */
+      .col.p-5 {
+        padding: 1.5rem !important;
+      }
+
+      /* Immagine profilo responsive */
+      .profile-image {
+        width: 250px;
+        height: 250px;
+        display: block;
+        margin: 0 auto 1rem;
+      }
+
+      /* Titoli */
+      h3 {
+        font-size: 1.5rem !important;
+      }
+
+      /* Testo */
+      p {
+        font-size: 0.95rem !important;
+      }
+
+      ul li {
+        font-size: 0.95rem;
+      }
+
+      /* Bottone prenota */
+      .button-right a {
+        display: block;
+        text-align: center;
+        padding: 12px 20px !important;
+        font-size: 0.9rem !important;
+        width: 100%;
+      }
+    }
+
+    /* Media queries per schermi molto piccoli */
+    @media screen and (max-width: 480px) {
+      .col.p-5 {
+        padding: 1rem !important;
+      }
+
+      .profile-image {
+        width: 180px;
+        height: 180px;
+      }
+
+      h3 {
+        font-size: 1.3rem !important;
+      }
+
+      p,
+      ul li {
+        font-size: 0.9rem !important;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div style="height: 140px; background-color: #C18774;">
+  <div class="header-container">
     {% include "navbar.html" %}
   </div>
 
   <div class="container">
     <div class="row">
 
+      <div class="col p-5 bg-light">
+        <img src="{{url_for('static', filename='images/zeno.png') }}" class="rounded-circle profile-image">
+      </div>
       <div class="col p-5 bg-light">
         <h3 class="fw-bold">Osteopatia</h3>
         {% include "cerchi.html" %}
@@ -60,14 +177,10 @@
         <br><br>
         <div class="button-right">
           <a href="mailto:zeno.salzano@gmail.com" class="btn text-white rounded-pill px-4"
-            style="background-color:#C18774; text-decoration:none;">
+            style="background-color:#C44325; text-decoration:none;">
             PRENOTA UNA PRIMA CONSULENZA
           </a>
         </div>
-      </div>
-      <div class="col p-5 bg-light">
-        <img src="{{url_for('static', filename='images/zeno.png') }}" class="rounded-circle"
-          style="width: 400px; height: 400px; object-fit: cover;">
       </div>
     </div>
   </div>

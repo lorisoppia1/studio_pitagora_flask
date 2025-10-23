@@ -24,13 +24,19 @@
       /* overflow: hidden; */
       /* font-family: "ItsRonda"; */
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      height: 100vh;
+      /* height: 100vh;
       display: grid;
-      place-items: center;
+      place-items: center; */
     }
 
     .title {
       font-size: 100px;
+      color: white;
+      font-family: "ItsRonda", sans-serif;
+    }
+
+    .subtitle {
+      font-size: 40px;
       color: white;
       font-family: "ItsRonda", sans-serif;
     }
@@ -47,10 +53,15 @@
     }
 
     #video-section {
-      width: 100%;
+      width: 95vw;
       height: 100vh;
       position: relative;
       overflow: hidden;
+      border-radius: 15px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     #home-title {
@@ -193,6 +204,172 @@
       padding: 30px;
       box-sizing: border-box;
     }
+
+    /* Media queries per tablet */
+    @media screen and (max-width: 1024px) {
+      .title {
+        font-size: 60px !important;
+      }
+
+      .subtitle {
+        font-size: 28px !important;
+      }
+
+      #home-title {
+        margin-top: 400px;
+        padding-left: 10%;
+      }
+    }
+
+    /* Media queries per smartphone */
+    @media screen and (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .title {
+        font-size: 45px !important;
+        color: black !important;
+      }
+
+      .subtitle {
+        font-size: 25px !important;
+        color: black !important;
+      }
+
+      #home-title {
+        margin-top: 75vh;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Rimuovi margini laterali dalle card */
+      .my-2[style*="margin-left"],
+      .my-2[style*="margin-right"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* Immagini servizi responsive */
+      .service-img {
+        width: 100% !important;
+        max-width: 180px !important;
+        height: auto !important;
+      }
+
+      /* Titoli servizi responsive */
+      h4[style*="width: 250px"] {
+        width: 100% !important;
+        max-width: 180px !important;
+        font-size: 1rem !important;
+      }
+
+      /* Immagini card (spirale, mani, atomo) responsive */
+      .my-2 img {
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+
+      /* Card con altezza fissa responsive */
+      .my-2[style*="height: 140px"] {
+        height: auto !important;
+        min-height: 120px !important;
+      }
+
+      /* Testi nelle card più piccoli */
+      .my-2 h4 {
+        font-size: 1rem !important;
+      }
+
+      .my-2 p {
+        font-size: 0.85rem !important;
+      }
+
+      /* Immagini "Il nostro approccio" responsive */
+      .square-img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+      }
+    }
+
+    /* Media queries per schermi molto piccoli */
+    @media screen and (max-width: 480px) {
+      body {
+        overflow-x: hidden;
+      }
+
+      .title {
+        font-size: 45px !important;
+        color: black !important;
+      }
+
+      .subtitle {
+        font-size: 25px !important;
+        color: black !important;
+      }
+
+      #home-title {
+        margin-top: 75vh;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Rimuovi margini laterali dalle card */
+      .my-2[style*="margin-left"],
+      .my-2[style*="margin-right"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* Immagini servizi responsive */
+      .service-img {
+        width: 100% !important;
+        max-width: 150px !important;
+        height: auto !important;
+      }
+
+      /* Titoli servizi responsive */
+      h4[style*="width: 250px"] {
+        width: 100% !important;
+        max-width: 150px !important;
+        font-size: 0.9rem !important;
+      }
+
+      /* Immagini card (spirale, mani, atomo) responsive */
+      .my-2 img {
+        max-width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+      }
+
+      /* Card con altezza fissa responsive */
+      .my-2[style*="height: 140px"] {
+        height: auto !important;
+        min-height: 100px !important;
+      }
+
+      /* Testi nelle card più piccoli */
+      .my-2 h4 {
+        font-size: 0.9rem !important;
+      }
+
+      .my-2 p {
+        font-size: 0.8rem !important;
+      }
+
+      /* Immagini "Il nostro approccio" responsive */
+      .square-img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+      }
+    }
   </style>
 </head>
 
@@ -205,7 +382,7 @@
     {% include "navbar.html" %}
     <section id="home-title">
       <h1 class="title">STUDIO PITAGORA</h1>
-      <h1 class="title" style="font-size: 40px;">SERVIZI RIEDUCATIVI E RIABILITATIVI</h1>
+      <h1 class="subtitle">SERVIZI RIEDUCATIVI E RIABILITATIVI</h1>
     </section>
   </section>
 
@@ -278,7 +455,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>

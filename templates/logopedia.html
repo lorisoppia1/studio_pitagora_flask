@@ -39,6 +39,12 @@
       object-fit: cover;
     }
 
+    .profile-image-medium {
+      width: 200px;
+      height: 240px;
+      object-fit: cover;
+    }
+
     /* Media queries per tablet */
     @media screen and (max-width: 1024px) {
       .header-container {
@@ -226,8 +232,8 @@
         <img src="{{url_for('static', filename='images/foto_ale.png') }}" class="rounded-circle profile-image-small">
       </div>
       <div class="col-8 p-5 bg-light">
-        <h4 class="fw-bold">Coordinatore e Logopedista</h4>
-        <h3 class="fw-bold">Dott. Alessandro Rigamonti</h3>
+        <h3 class="fw-bold">Coordinatore e Logopedista</h3>
+        <h4 class="fw-bold">Dott. Alessandro Rigamonti</h4>
         {% include "cerchi.html" %}
         <p>
           Sono il fondatore e responsabile di Studio Pitagora.
@@ -242,6 +248,12 @@
           Nel 2023 ho fondato Studio Pitagora, un centro multidisciplinare dedicato al benessere e alla salute, dove
           professionisti di diverse aree collaborano per offrire percorsi terapeutici personalizzati e integrati.
         </p>
+        <div class="button-right">
+          <a href="mailto:alessandro@logopedistarigamonti.com" class="btn text-white rounded-pill px-4"
+            style="background-color:#C44325; text-decoration:none;">
+            PRENOTA UNA PRIMA CONSULENZA
+          </a>
+        </div>
       </div>
 
     </div>
@@ -250,15 +262,17 @@
   <div class="container">
     <div class="row">
       <div class="col-4 p-5 bg-light d-flex justify-content-center align-items-center">
-        <img src="{{url_for('static', filename='images/flavia.png') }}" class="rounded-circle profile-image-small">
+        <img src="{{url_for('static', filename='images/flavia.png') }}" class="rounded-circle profile-image-medium">
       </div>
 
       <div class="col-8 p-5 bg-light">
-        <h3 class="fw-bold">Dott.ssa Flavia Indellicati</h3>
+        <h4 class="fw-bold">Dott.ssa Flavia Indellicati</h4>
         {% include "cerchi.html" %}
         <p>
           Sono laureata in Logopedia, Università di Medicina e Chirurgia di Verona.
-          Tutor per i Disturbi di Apprendimento (DSA) e Iperattività (ADHD), Consorzio Universitario Humanitas.
+          Tutor per i Disturbi di Apprendimento (DSA) e Iperattività (ADHD), Consorzio Universitario Humanitas. <br>
+          Per Studio Pitagora mi occupo di trattamenti logopedici riabilitativi in ambito di disturbi del linguaggio
+          (DSL e DL), disturbi dell'apprendimento (DSA), disturbi della voce (disfonie), balbuzie e afasia.
         </p>
       </div>
 

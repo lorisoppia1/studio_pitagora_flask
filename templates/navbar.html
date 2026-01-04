@@ -39,15 +39,20 @@
 
   .links {
     display: flex;
-    gap: 50px;
+    /* gap: 50px; */
+    gap: clamp(16px, 3vw, 50px);
     font-weight: bold;
     font-size: 16px;
     letter-spacing: 1px;
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
   }
 
   .links a {
     color: black;
     text-decoration: none;
+    margin: 0;
   }
 
   .links a:hover {
@@ -73,6 +78,10 @@
     transition: background-color 0.3s;
   }
 
+  .button-right {
+    flex-shrink: 0;
+  }
+
   .button-right button:hover {
     background-color: #3b8d91;
   }
@@ -80,6 +89,13 @@
   .dropdown {
     position: relative;
     display: inline-block;
+  }
+
+  .dropdown>a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
   }
 
   .dropdown-content {
@@ -296,14 +312,15 @@
 
 <div class="navbar text-uppercase">
   <div class="logo">
-    <a href="/chi_siamo"><img src="{{ url_for('static', filename='images/logosenzasfondo.png') }}"
+    <a href="/lo_studio"><img src="{{ url_for('static', filename='images/logosenzasfondo.png') }}"
         alt="Studio Pitagora"></a>
   </div>
   <div class="links" id="navLinks">
     <a href="/">Home</a>
-    <a href="/chi_siamo">Chi siamo</a>
+    <a href="/lo_studio">Lo studio</a>
     <div class="dropdown" id="dropdownMenu">
-      <a href="#" onclick="toggleDropdown(event)">Servizi <i class="bi bi-chevron-down"></i></a>
+      <!-- <a href="#" onclick="toggleDropdown(event)">Servizi <i class="bi bi-chevron-down"></i></a> -->
+      <a href="#" onclick="toggleDropdown(event)">Professionisti <i class="bi bi-chevron-down"></i></a>
       <div class="dropdown-content">
         <a href="/logopedia">Logopedia</a>
         <a href="/psicoterapia">Psicoterapia</a>
